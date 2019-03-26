@@ -8,6 +8,8 @@ import { Demo1Component } from '../app1/demo1/demo1.component';
 import { HomeComponent } from '../app1/home/home.component';
 import { LoginComponent } from '../app1/login/login.component';
 import { RegisterComponent } from '../app1/register/register.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; /*Form are created in app1 module but still we have to add formsmodule in app why ?? */
 
 
 @NgModule({
@@ -17,11 +19,14 @@ import { RegisterComponent } from '../app1/register/register.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    HeaderComponent,    
+    HeaderComponent   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
